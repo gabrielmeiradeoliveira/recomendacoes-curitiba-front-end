@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -114,13 +113,13 @@
         }
         for (var i = 0; i < numRestaurantes; i++) {
             var restaurante = recomendados[i][0];
-            var media_sentimento = recomendados[i][1];
+            var nota= recomendados[i][1];
             var nome = restaurante.name;
             var endereco = restaurante.address;
             var pontuacao = restaurante.rating;
             var comentario = restaurante.reviews[0].content;
             var div = document.createElement("div");
-            div.innerHTML = "<h3>" + nome + "</h3><p>" + endereco + "</p><p>Média de sentimento: " + media_sentimento + "</p>";
+            div.innerHTML = "<h3>" + nome + "</h3><p>" + endereco + "</p><p>Nota: " + nota + "</p>";
             resultado.appendChild(div);
 
             // Criar elemento de imagem e definir o src como o nome da imagem correspondente
@@ -154,7 +153,19 @@
 
         // Função para enviar a pesquisa para a API
         function enviarPesquisa() {
-    var feedback = document.getElementById("feedback").value;
+            var feedback = document.getElementById("feedback").value.toLowerCase();
+
+    if (feedback === "") {
+        alert("Por favor, digite o tipo de comida que você está procurando.");
+        return;
+    }
+    if (/^\d+$/.test(feedback)) {
+        alert("Por favor, digite um tipo de comida válido.");
+        return;
+    }
+
+ 
+    
     //Embaralha a ordem das imagens aleatoriamente
     imagens = imagens.sort(() => Math.random() - 0.5);
     var script = document.createElement("script");
