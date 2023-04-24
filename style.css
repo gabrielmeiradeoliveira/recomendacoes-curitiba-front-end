@@ -1,0 +1,64 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo geral do body */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #b6e8eb;
+  }
+  
+  /* Formulário */
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px 0;
+  }
+  
+  /* Input de texto */
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    margin-right: 10px;
+    transition: box-shadow 0.2s ease-in-out;
+    text-transform: lowercase;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Botão */
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .restaurante {
+    margin: 10px 300px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: aliceblue;
+  }
+  
